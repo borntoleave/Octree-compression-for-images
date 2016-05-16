@@ -1,0 +1,122 @@
+(* Content-type: application/mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 7.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       145,          7]
+NotebookDataLength[      3404,        112]
+NotebookOptionsPosition[      3034,         96]
+NotebookOutlinePosition[      3381,        111]
+CellTagsIndexPosition[      3338,        108]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"go", "=", 
+   RowBox[{"Import", "[", 
+    RowBox[{"StringJoin", "[", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"NotebookDirectory", "[", "]"}], ",", 
+       "\"\<Ori_WhiteRose.bmp\>\""}], "}"}], "]"}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"gn", "=", 
+   RowBox[{"Import", "[", 
+    RowBox[{"StringJoin", "[", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"NotebookDirectory", "[", "]"}], ",", 
+       "\"\<WhiteRose.bmp\>\""}], "}"}], "]"}], "]"}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.571940720486064*^9, 3.571940805929064*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Export", "[", 
+   RowBox[{
+    RowBox[{"StringJoin", "[", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"NotebookDirectory", "[", "]"}], ",", 
+       "\"\<WhiteRose.gif\>\""}], "}"}], "]"}], ",", 
+    RowBox[{"{", 
+     RowBox[{
+     "go", ",", "go", ",", "go", ",", "go", ",", "gn", ",", "gn", ",", "gn", 
+      ",", "gn"}], "}"}], ",", "\"\<GIF\>\""}], "]"}], ";"}]], "Input",
+ CellChangeTimes->{{3.571940809557064*^9, 3.571940854246064*^9}, {
+  3.571940990783064*^9, 3.5719409964420643`*^9}, {3.571942576062026*^9, 
+  3.571942583242744*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"go", "=", 
+   RowBox[{"Import", "[", 
+    RowBox[{"StringJoin", "[", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"NotebookDirectory", "[", "]"}], ",", 
+       "\"\<Ori_Jonathan_Jackie.bmp\>\""}], "}"}], "]"}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"gn", "=", 
+   RowBox[{"Import", "[", 
+    RowBox[{"StringJoin", "[", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"NotebookDirectory", "[", "]"}], ",", 
+       "\"\<Jonathan_Jackie.bmp\>\""}], "}"}], "]"}], "]"}]}], 
+  ";"}]}], "Input",
+ CellChangeTimes->{{3.571940720486064*^9, 3.571940805929064*^9}, {
+  3.571942632847704*^9, 3.571942636694089*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Export", "[", 
+   RowBox[{
+    RowBox[{"StringJoin", "[", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"NotebookDirectory", "[", "]"}], ",", 
+       "\"\<Jonathan_Jackie.gif\>\""}], "}"}], "]"}], ",", 
+    RowBox[{"{", 
+     RowBox[{
+     "go", ",", "go", ",", "go", ",", "go", ",", "gn", ",", "gn", ",", "gn", 
+      ",", "gn"}], "}"}], ",", "\"\<GIF\>\""}], "]"}], ";"}]], "Input",
+ CellChangeTimes->{{3.571940809557064*^9, 3.571940854246064*^9}, {
+   3.571940990783064*^9, 3.5719409964420643`*^9}, {3.571942576062026*^9, 
+   3.571942583242744*^9}, 3.571942640087428*^9}]
+},
+WindowSize->{607, 647},
+WindowMargins->{{324, Automatic}, {-48, Automatic}},
+FrontEndVersion->"7.0 for Microsoft Windows (32-bit) (February 18, 2009)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[545, 20, 608, 18, 52, "Input"],
+Cell[1156, 40, 583, 15, 52, "Input"],
+Cell[1742, 57, 672, 20, 92, "Input"],
+Cell[2417, 79, 613, 15, 52, "Input"]
+}
+]
+*)
+
+(* End of internal cache information *)
+

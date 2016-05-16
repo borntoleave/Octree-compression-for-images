@@ -1,0 +1,326 @@
+(* Content-type: application/mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 7.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       145,          7]
+NotebookDataLength[     11144,        317]
+NotebookOptionsPosition[     10729,        300]
+NotebookOutlinePosition[     11076,        315]
+CellTagsIndexPosition[     11033,        312]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"mplot", "[", 
+   RowBox[{"file_", ",", "step_", ",", "dim_"}], "]"}], ":=", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"raw", "=", 
+     RowBox[{"Import", "[", 
+      RowBox[{
+       RowBox[{"StringJoin", "[", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"NotebookDirectory", "[", "]"}], ",", 
+          RowBox[{"ToString", "[", "file", "]"}], ",", "\"\<.dat\>\""}], 
+         "}"}], "]"}], ",", "\"\<Table\>\""}], "]"}]}], ";", 
+    "\[IndentingNewLine]", 
+    RowBox[{"t", "=", 
+     RowBox[{"Table", "[", 
+      RowBox[{
+       RowBox[{"{", "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"s", ",", 
+         RowBox[{"Length", "[", "raw", "]"}]}], "}"}]}], "]"}]}], ";", 
+    "\[IndentingNewLine]", 
+    RowBox[{"Table", "[", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"For", "[", 
+       RowBox[{
+        RowBox[{"l", "=", "1"}], ",", 
+        RowBox[{"l", "<", 
+         RowBox[{"Length", "[", 
+          RowBox[{"raw", "[", 
+           RowBox[{"[", "s", "]"}], "]"}], "]"}]}], ",", ",", 
+        RowBox[{
+         RowBox[{"t", "[", 
+          RowBox[{"[", "s", "]"}], "]"}], "=", 
+         RowBox[{"Append", "[", 
+          RowBox[{
+           RowBox[{"t", "[", 
+            RowBox[{"[", "s", "]"}], "]"}], ",", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"raw", "[", 
+              RowBox[{"[", 
+               RowBox[{"s", ",", 
+                RowBox[{"l", "++"}]}], "]"}], "]"}], ",", 
+             RowBox[{"raw", "[", 
+              RowBox[{"[", 
+               RowBox[{"s", ",", 
+                RowBox[{"l", "++"}]}], "]"}], "]"}], ",", 
+             RowBox[{"raw", "[", 
+              RowBox[{"[", 
+               RowBox[{"s", ",", 
+                RowBox[{"l", "++"}]}], "]"}], "]"}], ",", 
+             RowBox[{"raw", "[", 
+              RowBox[{"[", 
+               RowBox[{"s", ",", 
+                RowBox[{"l", "++"}]}], "]"}], "]"}]}], "}"}]}], "]"}]}]}], 
+       "]"}], "\[IndentingNewLine]", ",", 
+      RowBox[{"{", 
+       RowBox[{"s", ",", 
+        RowBox[{"Length", "[", "raw", "]"}]}], "}"}]}], "]"}], ";", 
+    "\[IndentingNewLine]", 
+    RowBox[{"newt", "=", 
+     RowBox[{"Table", "[", 
+      RowBox[{
+       RowBox[{"If", "[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{"i", "-", "1"}], ")"}], "*", "16"}], "+", "j"}], 
+          "\[LessEqual]", 
+          RowBox[{"Length", "[", 
+           RowBox[{"t", "[", 
+            RowBox[{"[", "step", "]"}], "]"}], "]"}]}], ",", 
+         RowBox[{"RGBColor", "@@", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"Table", "[", 
+             RowBox[{
+              RowBox[{"t", "[", 
+               RowBox[{"[", 
+                RowBox[{"step", ",", 
+                 RowBox[{
+                  RowBox[{
+                   RowBox[{"(", 
+                    RowBox[{"i", "-", "1"}], ")"}], "*", "16"}], "+", "j"}], 
+                 ",", "c"}], "]"}], "]"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"c", ",", "3"}], "}"}]}], "]"}], "/", "256"}], ")"}]}],
+          ",", "White"}], "]"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"i", ",", "16"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"j", ",", "16"}], "}"}]}], "]"}]}], ";", 
+    "\[IndentingNewLine]", 
+    RowBox[{"count", "=", 
+     RowBox[{"Table", "[", 
+      RowBox[{
+       RowBox[{"If", "[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{"i", "-", "1"}], ")"}], "*", "16"}], "+", "j"}], 
+          "\[LessEqual]", 
+          RowBox[{"Length", "[", 
+           RowBox[{"t", "[", 
+            RowBox[{"[", "step", "]"}], "]"}], "]"}]}], ",", 
+         RowBox[{"t", "[", 
+          RowBox[{"[", 
+           RowBox[{"step", ",", 
+            RowBox[{
+             RowBox[{
+              RowBox[{"(", 
+               RowBox[{"i", "-", "1"}], ")"}], "*", "16"}], "+", "j"}], ",", 
+            "4"}], "]"}], "]"}], ",", "0.1"}], "]"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"i", ",", "16"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"j", ",", "16"}], "}"}]}], "]"}]}], ";", 
+    "\[IndentingNewLine]", 
+    RowBox[{"Switch", "[", 
+     RowBox[{"dim", ",", "\[IndentingNewLine]", "2", ",", 
+      RowBox[{"MatrixPlot", "[", 
+       RowBox[{"newt", ",", 
+        RowBox[{"ImageSize", "\[Rule]", "600"}]}], "]"}], ",", 
+      "\[IndentingNewLine]", "3", ",", 
+      RowBox[{"Graphics3D", "[", 
+       RowBox[{
+        RowBox[{"Table", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"newt", "[", 
+             RowBox[{"[", 
+              RowBox[{"i", ",", "j"}], "]"}], "]"}], ",", 
+            RowBox[{"Lighting", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{"{", 
+               RowBox[{"\"\<Ambient\>\"", ",", "None"}], "}"}], "}"}]}], ",", 
+            RowBox[{"Cuboid", "[", 
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{"i", ",", "j", ",", "0"}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"i", "-", "1"}], ",", 
+                RowBox[{"j", "-", "1"}], ",", 
+                RowBox[{"Log", "[", 
+                 RowBox[{"count", "[", 
+                  RowBox[{"[", 
+                   RowBox[{"i", ",", "j"}], "]"}], "]"}], "]"}]}], "}"}]}], 
+             "]"}]}], "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"i", ",", "16"}], "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"j", ",", "16"}], "}"}]}], "]"}], ",", 
+        RowBox[{"PlotRange", "\[Rule]", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{"0", ",", "16"}], "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"0", ",", "16"}], "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"0", ",", "18"}], "}"}]}], "}"}]}], ",", 
+        RowBox[{"Axes", "\[Rule]", "True"}], ",", 
+        RowBox[{"PlotLabel", "\[Rule]", 
+         RowBox[{"Style", "[", 
+          RowBox[{"\"\<Log(Count)\>\"", ",", "Large", ",", "Bold"}], "]"}]}], 
+        ",", 
+        RowBox[{"ImageSize", "\[Rule]", "600"}], ",", 
+        RowBox[{"ViewPoint", "\[Rule]", 
+         RowBox[{"{", 
+          RowBox[{"16", ",", "16", ",", "100"}], "}"}]}]}], "]"}]}], 
+     "\[IndentingNewLine]", "]"}]}], ")"}]}]], "Input",
+ CellChangeTimes->{{3.5754233509715605`*^9, 3.5754234429878235`*^9}, {
+   3.5754234809869967`*^9, 3.575423651456747*^9}, {3.575423705157819*^9, 
+   3.5754237595799313`*^9}, {3.575423844513789*^9, 3.575423881730918*^9}, {
+   3.5754239153538413`*^9, 3.5754239256664314`*^9}, 3.575424358690199*^9, {
+   3.5754253874580407`*^9, 3.5754253884280963`*^9}, {3.5754254267742896`*^9, 
+   3.5754255045517383`*^9}, {3.575425560727951*^9, 3.5754256077956433`*^9}, {
+   3.5754265401109686`*^9, 3.575426544604226*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Table", "[", 
+   RowBox[{
+    RowBox[{"Export", "[", 
+     RowBox[{
+      RowBox[{"StringJoin", "[", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"NotebookDirectory", "[", "]"}], ",", "\"\<temp/\>\"", ",", 
+         RowBox[{"ToString", "[", "boys", "]"}], ",", "\"\<.\>\"", ",", 
+         RowBox[{"ToString", "[", "step", "]"}], ",", "\"\<.png\>\""}], "}"}],
+        "]"}], ",", 
+      RowBox[{"mplot", "[", 
+       RowBox[{"boys", ",", "step", ",", "2"}], "]"}], ",", "\"\<PNG\>\""}], 
+     "]"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"step", ",", "74", ",", 
+      RowBox[{"Length", "[", "raw", "]"}], ",", "1"}], "}"}]}], "]"}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.5754253712471137`*^9, 3.575425371828147*^9}, {
+  3.575425512736206*^9, 3.575425524362871*^9}, {3.575425708340394*^9, 
+  3.5754258413250003`*^9}, {3.575426108255268*^9, 3.5754261089383073`*^9}, {
+  3.575426598461306*^9, 3.575426598665318*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Table", "[", 
+   RowBox[{
+    RowBox[{"Export", "[", 
+     RowBox[{
+      RowBox[{"StringJoin", "[", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"NotebookDirectory", "[", "]"}], ",", "\"\<temp1/\>\"", ",", 
+         RowBox[{"ToString", "[", "boys", "]"}], ",", "\"\<.\>\"", ",", 
+         RowBox[{"ToString", "[", "step", "]"}], ",", "\"\<.png\>\""}], "}"}],
+        "]"}], ",", 
+      RowBox[{"mplot", "[", 
+       RowBox[{"boys", ",", "step", ",", "3"}], "]"}], ",", "\"\<PNG\>\""}], 
+     "]"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"step", ",", "6", ",", 
+      RowBox[{"Length", "[", "raw", "]"}], ",", "1"}], "}"}]}], "]"}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.5754261791393223`*^9, 3.57542618468664*^9}, 
+   3.5754266183764453`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Table", "[", 
+   RowBox[{
+    RowBox[{"Export", "[", 
+     RowBox[{
+      RowBox[{"StringJoin", "[", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"NotebookDirectory", "[", "]"}], ",", "\"\<temp2/\>\"", ",", 
+         RowBox[{"ToString", "[", "rose", "]"}], ",", "\"\<.\>\"", ",", 
+         RowBox[{"ToString", "[", "step", "]"}], ",", "\"\<.png\>\""}], "}"}],
+        "]"}], ",", 
+      RowBox[{"mplot", "[", 
+       RowBox[{"rose", ",", "step", ",", "2"}], "]"}], ",", "\"\<PNG\>\""}], 
+     "]"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"step", ",", "1", ",", 
+      RowBox[{"Length", "[", "raw", "]"}], ",", "1"}], "}"}]}], "]"}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.575426217263503*^9, 3.5754262174265127`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Table", "[", 
+   RowBox[{
+    RowBox[{"Export", "[", 
+     RowBox[{
+      RowBox[{"StringJoin", "[", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"NotebookDirectory", "[", "]"}], ",", "\"\<temp3/\>\"", ",", 
+         RowBox[{"ToString", "[", "rose", "]"}], ",", "\"\<.\>\"", ",", 
+         RowBox[{"ToString", "[", "step", "]"}], ",", "\"\<.png\>\""}], "}"}],
+        "]"}], ",", 
+      RowBox[{"mplot", "[", 
+       RowBox[{"rose", ",", "step", ",", "3"}], "]"}], ",", "\"\<PNG\>\""}], 
+     "]"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"step", ",", "1", ",", 
+      RowBox[{"Length", "[", "raw", "]"}], ",", "1"}], "}"}]}], "]"}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.5754261926380944`*^9, 3.5754262132502737`*^9}}]
+},
+WindowSize->{1424, 775},
+WindowMargins->{{-35, Automatic}, {Automatic, 51}},
+FrontEndVersion->"7.0 for Microsoft Windows (32-bit) (February 18, 2009)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[545, 20, 6882, 186, 252, "Input"],
+Cell[7430, 208, 962, 23, 31, "Input"],
+Cell[8395, 233, 792, 21, 31, "Input"],
+Cell[9190, 256, 765, 20, 31, "Input"],
+Cell[9958, 278, 767, 20, 31, "Input"]
+}
+]
+*)
+
+(* End of internal cache information *)
