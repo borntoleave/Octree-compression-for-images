@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       145,          7]
-NotebookDataLength[      3404,        112]
-NotebookOptionsPosition[      3034,         96]
-NotebookOutlinePosition[      3381,        111]
-CellTagsIndexPosition[      3338,        108]
+NotebookDataLength[      6281,        194]
+NotebookOptionsPosition[      5632,        171]
+NotebookOutlinePosition[      6064,        188]
+CellTagsIndexPosition[      6021,        185]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -35,8 +35,16 @@ Cell[BoxData[{
      RowBox[{"{", 
       RowBox[{
        RowBox[{"NotebookDirectory", "[", "]"}], ",", 
-       "\"\<WhiteRose.bmp\>\""}], "}"}], "]"}], "]"}]}], ";"}]}], "Input",
- CellChangeTimes->{{3.571940720486064*^9, 3.571940805929064*^9}}],
+       "\"\<WhiteRose.bmp\>\""}], "}"}], "]"}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"s1", "=", 
+   RowBox[{"{", 
+    RowBox[{
+    "go", ",", "go", ",", "go", ",", "go", ",", "gn", ",", "gn", ",", "gn", 
+     ",", "gn"}], "}"}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.571940720486064*^9, 3.571940805929064*^9}, {
+  3.672398056672041*^9, 3.6723980600477*^9}}],
 
 Cell[BoxData[
  RowBox[{
@@ -46,18 +54,15 @@ Cell[BoxData[
      RowBox[{"{", 
       RowBox[{
        RowBox[{"NotebookDirectory", "[", "]"}], ",", 
-       "\"\<WhiteRose.gif\>\""}], "}"}], "]"}], ",", 
-    RowBox[{"{", 
-     RowBox[{
-     "go", ",", "go", ",", "go", ",", "go", ",", "gn", ",", "gn", ",", "gn", 
-      ",", "gn"}], "}"}], ",", "\"\<GIF\>\""}], "]"}], ";"}]], "Input",
+       "\"\<WhiteRose.gif\>\""}], "}"}], "]"}], ",", "s1", ",", 
+    "\"\<GIF\>\""}], "]"}], ";"}]], "Input",
  CellChangeTimes->{{3.571940809557064*^9, 3.571940854246064*^9}, {
   3.571940990783064*^9, 3.5719409964420643`*^9}, {3.571942576062026*^9, 
-  3.571942583242744*^9}}],
+  3.571942583242744*^9}, {3.672398054912875*^9, 3.672398062590802*^9}}],
 
 Cell[BoxData[{
  RowBox[{
-  RowBox[{"go", "=", 
+  RowBox[{"go2", "=", 
    RowBox[{"Import", "[", 
     RowBox[{"StringJoin", "[", 
      RowBox[{"{", 
@@ -66,16 +71,23 @@ Cell[BoxData[{
        "\"\<Ori_Jonathan_Jackie.bmp\>\""}], "}"}], "]"}], "]"}]}], 
   ";"}], "\[IndentingNewLine]", 
  RowBox[{
-  RowBox[{"gn", "=", 
+  RowBox[{"gn2", "=", 
    RowBox[{"Import", "[", 
     RowBox[{"StringJoin", "[", 
      RowBox[{"{", 
       RowBox[{
        RowBox[{"NotebookDirectory", "[", "]"}], ",", 
        "\"\<Jonathan_Jackie.bmp\>\""}], "}"}], "]"}], "]"}]}], 
-  ";"}]}], "Input",
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"s2", "=", 
+   RowBox[{"{", 
+    RowBox[{
+    "go2", ",", "go2", ",", "go2", ",", "go2", ",", "gn2", ",", "gn2", ",", 
+     "gn2", ",", "gn2"}], "}"}]}], ";"}]}], "Input",
  CellChangeTimes->{{3.571940720486064*^9, 3.571940805929064*^9}, {
-  3.571942632847704*^9, 3.571942636694089*^9}}],
+  3.571942632847704*^9, 3.571942636694089*^9}, {3.6723980148782997`*^9, 
+  3.672398050262538*^9}}],
 
 Cell[BoxData[
  RowBox[{
@@ -85,18 +97,83 @@ Cell[BoxData[
      RowBox[{"{", 
       RowBox[{
        RowBox[{"NotebookDirectory", "[", "]"}], ",", 
-       "\"\<Jonathan_Jackie.gif\>\""}], "}"}], "]"}], ",", 
-    RowBox[{"{", 
-     RowBox[{
-     "go", ",", "go", ",", "go", ",", "go", ",", "gn", ",", "gn", ",", "gn", 
-      ",", "gn"}], "}"}], ",", "\"\<GIF\>\""}], "]"}], ";"}]], "Input",
+       "\"\<Jonathan_Jackie.gif\>\""}], "}"}], "]"}], ",", "s2", ",", 
+    "\"\<GIF\>\""}], "]"}], ";"}]], "Input",
  CellChangeTimes->{{3.571940809557064*^9, 3.571940854246064*^9}, {
    3.571940990783064*^9, 3.5719409964420643`*^9}, {3.571942576062026*^9, 
-   3.571942583242744*^9}, 3.571942640087428*^9}]
+   3.571942583242744*^9}, 3.571942640087428*^9, {3.672398019542001*^9, 
+   3.6723980677830477`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"ExpandFileName", "[", 
+  "\"\</Users/b2l/GitHub/OctreeCompressionForImages/indexcolor/Jonathan_\
+Jackie.gif\>\"", "]"}]], "Input",
+ NumberMarks->False],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Export", "[", 
+   RowBox[{
+    RowBox[{"StringJoin", "[", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"NotebookDirectory", "[", "]"}], ",", "\"\<indexC.gif\>\""}], 
+      "}"}], "]"}], ",", 
+    RowBox[{"Join", "[", 
+     RowBox[{"s1", ",", "s2"}], "]"}], ",", "\"\<GIF\>\"", ",", 
+    RowBox[{"\"\<DisplayDurations\>\"", "\[Rule]", 
+     RowBox[{"1", "/", "2"}]}]}], "]"}], ";"}]], "Input",
+ CellChangeTimes->{{3.672397986451359*^9, 3.672397988043522*^9}, {
+  3.672398073759107*^9, 3.6723980767991543`*^9}, {3.672398114954702*^9, 
+  3.6723981426657677`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"s3", "=", 
+  RowBox[{"Import", "[", 
+   RowBox[{
+    RowBox[{"NotebookDirectory", "[", "]"}], "<>", "\"\<WR_compare.gif\>\""}],
+    "]"}]}]], "Input",
+ CellChangeTimes->{{3.6723981968083143`*^9, 3.6723982445026293`*^9}, 
+   3.672398426820938*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"s4", "=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"ImageResize", "[", 
+      RowBox[{
+       RowBox[{"ImageCrop", "[", 
+        RowBox[{"#", ",", 
+         RowBox[{"{", 
+          RowBox[{"240", ",", "240"}], "}"}]}], "]"}], ",", "500"}], "]"}], 
+     " ", "&"}], "/@", "s33"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.672398247591714*^9, 3.672398253094379*^9}, {
+   3.672398283537109*^9, 3.672398307320266*^9}, {3.672398386094151*^9, 
+   3.672398390110111*^9}, 3.672398538343957*^9, {3.672398669587179*^9, 
+   3.672398679625123*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Export", "[", 
+   RowBox[{
+    RowBox[{"StringJoin", "[", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"NotebookDirectory", "[", "]"}], ",", "\"\<indexC.gif\>\""}], 
+      "}"}], "]"}], ",", "s4", ",", "\"\<GIF\>\"", ",", 
+    RowBox[{"\"\<DisplayDurations\>\"", "\[Rule]", "1"}]}], "]"}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.672397986451359*^9, 3.672397988043522*^9}, {
+  3.672398073759107*^9, 3.6723980767991543`*^9}, {3.672398114954702*^9, 
+  3.6723981426657677`*^9}, {3.6723983632216053`*^9, 3.672398393932806*^9}, {
+  3.6723985180543213`*^9, 3.6723985181975822`*^9}}]
 },
 WindowSize->{607, 647},
-WindowMargins->{{324, Automatic}, {-48, Automatic}},
-FrontEndVersion->"7.0 for Microsoft Windows (32-bit) (February 18, 2009)",
+WindowMargins->{{259, Automatic}, {Automatic, 50}},
+PrivateNotebookOptions->{"VersionedStylesheet"->{"Default.nb"[8.] -> False}},
+FrontEndVersion->"10.2 for Mac OS X x86 (32-bit, 64-bit Kernel) (July 6, \
+2015)",
 StyleDefinitions->"Default.nb"
 ]
 (* End of Notebook Content *)
@@ -110,13 +187,17 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[545, 20, 608, 18, 52, "Input"],
-Cell[1156, 40, 583, 15, 52, "Input"],
-Cell[1742, 57, 672, 20, 92, "Input"],
-Cell[2417, 79, 613, 15, 52, "Input"]
+Cell[545, 20, 855, 26, 97, "Input"],
+Cell[1403, 48, 503, 12, 46, "Input"],
+Cell[1909, 62, 930, 27, 148, "Input"],
+Cell[2842, 91, 539, 13, 46, "Input"],
+Cell[3384, 106, 175, 4, 63, "Input"],
+Cell[3562, 112, 600, 15, 46, "Input"],
+Cell[4165, 129, 270, 7, 28, "Input"],
+Cell[4438, 138, 569, 15, 28, "Input"],
+Cell[5010, 155, 618, 14, 46, "Input"]
 }
 ]
 *)
 
 (* End of internal cache information *)
-
